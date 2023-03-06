@@ -1,0 +1,62 @@
+.introduçao {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.introduçao h1 {
+  font-size: 3.7rem;
+  line-height: 3rem;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.introduçao h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url("../img/detalhe.svg") no-repeat center;
+  position: absolute;
+  top: -50px;
+  left: -40px;
+  z-index: -1;
+}
+
+.introduçao p {
+  font-size: 1.5rem;
+  color: #525252;
+}
+
+@media (max-width: 1250px) {
+  .introduçao h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .introduçao {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .introduçao h1 {
+    font-size: 3rem;
+  }
+  .introduçao h1::before {
+    width: 30px;
+    height: 10px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .introduçao {
+    grid-template-columns: 1fr;
+  }
+  .introduçao img {
+    display: none;
+  }
+}
